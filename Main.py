@@ -20,6 +20,10 @@ time.sleep(60)
 from Functions.tctdeviceadmin import add_admin_user_silent; add_admin_user_silent()
 time.sleep(60)
 
+
+#Client Specific
+from client_specific.client_installs import client_specific_installs; client_specific_installs()
+
 def main():
     # List of programs to install
     programs = [
