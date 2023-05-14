@@ -54,6 +54,11 @@ def main():
             'name': 'Adobe Acrobat',
             'url': 'https://get.adobe.com/reader/enterprise/',
             'filename': 'acrobat_installer.exe'
+        },
+        {
+            'name': 'Global VPN Client',
+            'url': '',
+            'filename': ''
         }
         ]
         # Add more programs as needed
