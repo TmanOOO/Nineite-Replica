@@ -1,14 +1,24 @@
 import os
+import time
 
 from Functions.files_install import download_file
+time.sleep(60)
 from Functions.programs_install import install_program
-from Functions.program_uninstall import uninstall_program
-from Functions.update_check import check_for_updates
-from Functions.serial_number import get_serial_number
-from Functions.driver_install import get_device_info
-from Functions.remote_desktop_on import enable_rdp
-from Functions.time_zone import set_timezone_sydney
-from Functions.tctdeviceadmin import add_admin_user_silent
+time.sleep(60)
+from Functions.program_uninstall import uninstall_program; uninstall_program()
+time.sleep(60)
+from Functions.update_check import check_for_updates; check_for_updates()
+time.sleep(60)
+from Functions.serial_number import get_serial_number; get_serial_number()
+time.sleep(60)
+from Functions.driver_install import get_device_info; get_device_info()
+time.sleep(60)
+from Functions.remote_desktop_on import enable_rdp; enable_rdp()
+time.sleep(60)
+from Functions.time_zone import set_timezone_sydney; set_timezone_sydney(0)
+time.sleep(60)
+from Functions.tctdeviceadmin import add_admin_user_silent; add_admin_user_silent()
+time.sleep(60)
 
 def main():
     # List of programs to install
@@ -30,7 +40,7 @@ def main():
         },
         {
             'name': 'TeamViewer15',
-            'url': 'https://download.teamviewer.com/download/TeamViewer_Setup.exe',
+            'url': 'https://download.teamviewer.com/download/TeamViewer_Host_Setup.exe',
             'filename': 'teamviewer15_installer.exe'
         },
         {
