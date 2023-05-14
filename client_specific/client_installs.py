@@ -1,29 +1,34 @@
 import os
-import subprocess
+from Functions.files_install import download_file
+from Functions.programs_install import install_program
 
-def client_specific_installs(programs):
+def client_installs():
+    # List of programs to install
+    programs = [
+        {
+            'name': 'Firefox',
+            'url': 'https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US',
+            'filename': 'firefox_installer.exe'
+        },
+
+    ]
+    # Add more programs as needed
+    
+
+    # Create a directory to store the downloaded files
+    download_dir = 'downloads'
+    os.makedirs(download_dir, exist_ok=True)
+
+    # Download and install each program
     for program in programs:
-        # Check if the installer file exists
-        if not os.path.exists(program['filename']):
-            print(f"{program['name']} installer not found in {os.getcwd()}")
-            continue
+        print(f"Downloading {program['name']}...")
+        download_path = os.path.join(download_dir, program['filename'])
+        download_file(program['url'], download_path)
 
-        # Run the installer silently
         print(f"Installing {program['name']}...")
-        result = subprocess.run([program['filename'], '/S'], capture_output=True)
+        install_program(download_path)
 
-        # Check the output for errors
-        if result.returncode != 0:
-            print(f"Error installing {program['name']}:")
-            print(result.stderr.decode('utf-8'))
-        else:
-            print(f"{program['name']} installed successfully!")
+        print(f"{program['name']} installed successfully.\n")
 
-programs = [
-    {'name': 'Program 1', 'url': 'http://url-to-program1.com', 'filename': 'program1.exe'},
-    {'name': 'Program 2', 'url': 'http://url-to-program2.com', 'filename': 'program2.exe'},
-    {'name': 'Program 3', 'url': 'http://url-to-program3.com', 'filename': 'program3.exe'}
-]
-
-# Install client-specific programs
-client_specific_installs(programs)
+if __name__ == '__main__':
+    client_installs()

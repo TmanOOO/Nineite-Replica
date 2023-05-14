@@ -2,9 +2,7 @@ import os
 import time
 
 from Functions.files_install import download_file
-time.sleep(60)
 from Functions.programs_install import install_program
-time.sleep(60)
 from Functions.program_uninstall import uninstall_program; uninstall_program()
 time.sleep(60)
 from Functions.update_check import check_for_updates; check_for_updates()
