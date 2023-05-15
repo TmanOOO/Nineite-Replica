@@ -57,8 +57,7 @@ def main():
         },
         {
             'name': 'Global VPN Client',
-            'url': '',
-            'filename': ''
+            'filename': 'Installers/'
         }
         ]
         # Add more programs as needed
