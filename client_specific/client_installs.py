@@ -7,22 +7,18 @@ def client_installs():
     programs = [
         {
             'name': 'Syspro',
-            'url': 'https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US',
             'filename': 'firefox_installer.exe'
         },
         {
             'name': 'Citrix Workspace',
-            'url': 'https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US',
             'filename': 'firefox_installer.exe'
         },
         {
             'name': 'DWG True View',
-            'url': 'https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US',
             'filename': 'firefox_installer.exe'
         },
         {
             'name': 'Sentinel One',
-            'url': 'https://download.mozilla.org/?product=firefox-latest&os=win&lang=en-US',
             'filename': 'firefox_installer.exe'
         }
 
